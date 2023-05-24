@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: d_company
+  - name: fact_stock_price_daily
