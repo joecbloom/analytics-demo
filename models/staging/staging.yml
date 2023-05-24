@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: stg_company
+  - name: stg_price_daily
