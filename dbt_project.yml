@@ -39,5 +39,5 @@ models:
     materialized: table
     +schema: marts
   activations:
-    materialized: table
+    materialized: view
     +schema: activations
