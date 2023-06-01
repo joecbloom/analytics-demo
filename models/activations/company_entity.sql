@@ -17,7 +17,8 @@ with
     )
 
 select
-    company.company_id
+    company.d_company_key
+    ,company.company_id
     , company.company_name
     , min(stocks.low_price) as all_time_low
     , max(stocks.high_price) as all_time_high
@@ -25,4 +26,4 @@ select
 from company
 inner join stocks using (d_company_key)
 left join new_high using (d_company_key)
-group by 1, 2, 5
+group by 1, 2, 3, 6
