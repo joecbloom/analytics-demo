@@ -1,6 +1,6 @@
 with
-    datetime as (select * from {{ ref('time') }})
-    ,stocks as (select * from {{ ref('stocks') }})
+    datetime as (select * from {{ source('stocks', 'time') }})
+    ,stocks as (select * from {{ source('stocks', 'stocks') }})
 
 select    
     stocks.keycompany as company_id

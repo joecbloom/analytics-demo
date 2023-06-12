@@ -3,4 +3,4 @@ select
     , namecompany as company_name
     , stockcodecompany as ticker
     , current_timestamp as updated_at
-from {{ ref('company') }}
+from {{ source('stocks','company') }}
