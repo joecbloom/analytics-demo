@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: stocks
+    database: analytics_demo
+    schema: src_c2c_fashion
+    tables:
+      - name: c2c_fashion_user
+      - name: c2c_fashion_user_wide

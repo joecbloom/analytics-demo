@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: stocks
+    database: analytics_demo
+    schema: src_stocks  
+    tables:
+      - name: coin
+      - name: coins
+      - name: company
+      - name: stocks
+      - name: time
