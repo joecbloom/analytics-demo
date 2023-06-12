@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: stocks
+  - name: c2c_fashion
     database: analytics_demo
     schema: src_c2c_fashion
     tables:
