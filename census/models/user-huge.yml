@@ -1,6 +1,0 @@
----
-model:user-huge:
-  name: user_wide
-  query: select * from analytics_demo.src_c2c_fashion.c2c_fashion_user_wide
-  description: 
-  connection: data_warehouse:snowflake
