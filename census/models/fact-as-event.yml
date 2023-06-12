@@ -1,0 +1,10 @@
+---
+model:fact-as-event:
+  name: fact_as_event
+  query: |-
+    select
+        'had_stock_price' as event_name,
+        *
+    from analytics_demo.marts.fact_stock_price_daily
+  description: 
+  connection: data_warehouse:snowflake
