@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: hr
+    database: analytics_demo
+    schema: src_hr_system
+    tables:
+      - name: dmi_employees
+
+  - name: sales
+    database: analytics_demo
+    schema: src_sales
+    tables:
+      - name: dmi_sales

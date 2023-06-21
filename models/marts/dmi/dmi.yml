@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: d_account
+  - name: d_employee
+  - name: d_customer
+  - name: fact_sales
