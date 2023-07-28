@@ -1,7 +1,7 @@
 ---
-sync:basic-company-entity-s3-path-to-file-data-m-d-y-csv:
+sync:advanced-company-entity-s3-path-to-file-data-m-d-y-csv:
   paused: false
-  label: COMPANY_ENTITY-Advanced
+  label: COMPANY_ENTITY-Basic
   behavior:
     operation: upsert
   mapping_configuration:
@@ -21,7 +21,7 @@ sync:basic-company-entity-s3-path-to-file-data-m-d-y-csv:
       include_header: true
   source:
     type: table
-    connection_identifier: data_warehouse:snowflake
+    connection_identifier: data_warehouse:snowflake-1
     table_catalog: ANALYTICS_DEMO
     table_schema: DBT_ANALYTICS_DEMO_2
     table_name: COMPANY_ENTITY
