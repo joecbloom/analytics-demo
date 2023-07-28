@@ -1,7 +1,7 @@
 ---
 sync:basic-company-entity-s3-path-to-file-data-m-d-y-csv:
   paused: false
-  label: COMPANY_ENTITY-Advanced
+  label: COMPANY_ENTITY-Basic
   behavior:
     operation: upsert
   mapping_configuration:
