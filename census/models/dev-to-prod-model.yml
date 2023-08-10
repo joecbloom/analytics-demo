@@ -1,0 +1,6 @@
+---
+model:dev-to-prod-model:
+  name: dev-to-prod-model
+  query: select top 5 * from census.census.sync_log
+  description: 
+  connection: data_warehouse:snowflake
