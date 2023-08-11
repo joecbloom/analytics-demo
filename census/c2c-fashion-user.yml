@@ -1,6 +1,0 @@
----
-model:c2c-fashion-user:
-  name: c2c_fashion_user
-  query: select * from analytics_demo.src_c2c_fashion.c2c_fashion_user
-  description: 
-  connection: data_warehouse:snowflake
