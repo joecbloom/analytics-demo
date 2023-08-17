@@ -1,0 +1,6 @@
+---
+model:employees:
+  name: Employees
+  query: select * from staging.d_employee
+  description: 
+  connection: data_warehouse:snowflake
