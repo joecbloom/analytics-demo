@@ -1,0 +1,64 @@
+---
+sync:snowflake-signups-in-last-14-days-braze-user-cohort:
+  paused: false
+  behavior:
+    operation: mirror
+    mirror_properties:
+      strategy: sync_updates_and_deletes
+  mapping_configuration:
+    sync_all_source_columns:
+      enabled: false
+      mode: add_only
+  triggers:
+    schedule:
+      frequency: never
+  destination:
+    connection_identifier: destination:braze
+    object_identifier: user_with_cohort
+  source:
+    type: model
+    connection_identifier: data_warehouse:snowflake
+    object_identifier: model:signups-in-last-14-days
+  mappings:
+  - from:
+      type: column
+      data:
+        column_name: USERID
+    to:
+      field_name: external_id
+    is_primary_identifier: true
+  - from:
+      type: column
+      data:
+        column_name: EMAIL
+    to:
+      field_name: email
+  - from:
+      type: column
+      data:
+        column_name: FIRST_NAME
+    to:
+      field_name: first_name
+  - from:
+      type: column
+      data:
+        column_name: LAST_NAME
+    to:
+      field_name: last_name
+  - from:
+      type: constant
+      data:
+        basic_type: text
+        value: New Signups 14 Days (Tried Paid Feature)
+    to:
+      field_name: cohort_id
+      lookup_object:
+        object_identifier: cohort
+        field_to_match_by: name
+  operational_settings:
+    alerts:
+      failed_run_notifications:
+        enabled: true
+      failed_record_notifications:
+        enabled: true
+        threshold_percent: 75
